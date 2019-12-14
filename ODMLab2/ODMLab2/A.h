@@ -7,8 +7,8 @@ protected:
 	int *ay;
 
 public:
-	int Add(int x, int y) { return x + y; }
-	int Multiply(int x, int y) { return x * y; }
+	int Add() { return *ax + *ay; }
+	int Multiply() { return *ax * *ay; }
 
 public:
 	A(int x, int y)

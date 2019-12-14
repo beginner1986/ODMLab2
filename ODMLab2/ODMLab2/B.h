@@ -10,8 +10,8 @@ protected:
 	int *by;
 
 public:
-	int Substract(int x, int y) { return x - y; }
-	int Divide(int x, int y) { return x / y; }
+	int Substract() { return *bx - *by; }
+	int Divide() { return *bx / *by; }
 
 public:
 	B(int ax, int ay, int x, int y) : A(ax, ay)
