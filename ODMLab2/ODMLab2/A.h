@@ -1,0 +1,35 @@
+#pragma once
+class A
+{
+public:
+	int *ax;
+protected:
+	int *ay;
+
+public:
+	int Add(int x, int y) { return x + y; }
+	int Multiply(int x, int y) { return x * y; }
+
+public:
+	A(int x, int y)
+	{
+		ax = new int;
+		ay = new int;
+
+		*ax = x;
+		*ay = y;
+	}
+
+	~A()
+	{
+		delete ax;
+		delete ay;
+	}
+
+	A(const A &a)
+	{
+		ax = a.ax;
+		ay = a.ay;
+	}
+};
+
