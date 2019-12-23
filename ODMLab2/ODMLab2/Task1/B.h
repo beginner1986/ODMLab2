@@ -23,7 +23,7 @@ public:
 		*by = y;
 	}
 
-	~B()
+	virtual ~B()
 	{
 		delete bx;
 		delete by;

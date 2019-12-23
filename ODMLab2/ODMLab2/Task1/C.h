@@ -23,7 +23,7 @@ public:
 		*cy = y;
 	}
 
-	~C()
+	virtual ~C()
 	{
 		delete cx;
 		delete cy;

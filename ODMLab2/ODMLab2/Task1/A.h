@@ -21,7 +21,7 @@ public:
 		*ay = y;
 	}
 
-	~A()
+	virtual ~A()
 	{
 		delete ax;
 		delete ay;
