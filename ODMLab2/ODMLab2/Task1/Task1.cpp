@@ -4,7 +4,7 @@
 class Task1
 {
 public:
-	int Start()
+	void Start()
 	{
 		A* a = new A(1, 2);
 		B* b = new B(2, 4, 6, 8);

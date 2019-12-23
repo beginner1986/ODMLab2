@@ -12,7 +12,7 @@ private:
 
 public:
 	int Avg() { return (*ax + *ay + *bx + *by + *cx + *cy) / 6; }
-	int Sqrt() { return sqrt(*dx); }
+	int Sqrt() { return (int)sqrt(*dx); }
 
 public:
 	D(int ax, int ay, int bx, int by, int cx, int cy, int x, int y)
