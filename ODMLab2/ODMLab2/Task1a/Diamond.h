@@ -6,5 +6,11 @@
 
 class Diamond : public Derived1, Derived2
 {
+public:
+	Diamond() = default;
 
+	void PrintName() override
+	{
+		std::cout << "Diamond" << std::endl;
+	}
 };

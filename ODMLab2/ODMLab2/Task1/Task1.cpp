@@ -1,6 +1,8 @@
 #include <iostream>
 #include "D.h"
 
+// TASK 1: simple inheritance
+
 class Task1
 {
 public:

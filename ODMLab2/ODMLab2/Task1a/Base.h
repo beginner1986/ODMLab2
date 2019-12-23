@@ -5,9 +5,7 @@
 class Base
 {
 public:
-	~Base() = default;
-
-	void PrintName()
+	virtual void PrintName()
 	{
 		std::cout << "Base" << std::endl;
 	}

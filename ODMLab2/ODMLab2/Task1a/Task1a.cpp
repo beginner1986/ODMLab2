@@ -2,14 +2,15 @@
 
 #include "Task1a/Diamond.h"
 
+// TASK 1a: virtual inheritance
+
 class Task1a
 {
 public:
 	void Start()
 	{
-		Diamond* diamond = new Diamond();
-		diamond->PrintName();
-
-		delete diamond;
+		Diamond diamond;
+		Base* base = &diamond;
+		base->PrintName();
 	}
 };
