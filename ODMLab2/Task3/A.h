@@ -1,51 +1,53 @@
 #pragma once
 
-// operators overloading for Task3
-#include "../Task3/AOperators.h"
-
 class A
 {
 public:
-	int *ax;
+	int ax;
+	int *tab;
 protected:
-	int *ay;
+	int ay;
 
 public:
-	int Add() { return *ax + *ay; }
-	int Multiply() { return *ax * *ay; }
+	int Add() { return ax + ay; }
+	int Multiply() { return ax * ay; }
 
 public:
 	A()
 	{
-		ax = new int;
-		ay = new int;
-
 		ax = 0;
 		ay = 0;
+		tab = new int[10];
+		for (int i = 0; i < 10; i++)
+			tab[i] = 0;
+
+		std::cout << "A created" << std::endl;
 	}
 
 	A(int x, int y)
 	{
-		ax = new int;
-		ay = new int;
+		ax = x;
+		ay = y;
+		tab = new int[10];
 
-		*ax = x;
-		*ay = y;
+		std::cout << "A created" << std::endl;
 	}
 
 	virtual ~A()
 	{
-		delete ax;
-		delete ay;
+		delete tab;
+		
+		std::cout << "A deleted" << std::endl;
 	}
 
-	A(const A &a)
+	A(const A& a)
 	{
 		ax = a.ax;
 		ay = a.ay;
+
+		std::cout << "A copied" << std::endl;
 	}
 
-	// Operators overloading for Task 3
 	A& operator=(const A& other);
 	A& operator+=(const A& other);
 	A& operator++();
@@ -56,7 +58,7 @@ public:
 	bool operator<(const A& other);
 	bool operator==(const A& other);
 	bool operator!=(const A& other);
-	A& operator[](int index);
+	int& operator[](size_t index);
 	A& operator()(int ax, int ay);
 	A& operator()(int ax);
 };

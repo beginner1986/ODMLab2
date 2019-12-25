@@ -6,6 +6,16 @@
 class Final final: public Middle
 {
 public:
+	Final()
+	{
+		std::cout << "Final created" << std::endl;
+	}
+
+	virtual ~Final()
+	{
+		std::cout << "Final deleted" << std::endl;
+	}
+
 	void Hello() override
 	{
 		std::cout << "Hello Final" << std::endl;
