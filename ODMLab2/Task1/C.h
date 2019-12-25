@@ -5,33 +5,33 @@
 class C : protected B
 {
 public:
-	int *cx;
+	int cx;
 protected:
-	int *cy;
+	int cy;
 
 public:
-	int Mod() { return *cx % *cy; }
-	int Square() { return *cx * *cx; }
+	int Mod() { return cx % cy; }
+	int Square() { return cx * cx; }
 
 public:
 	C(int ax, int ay, int bx, int by, int x, int y) : B(ax, ay, bx, by)
 	{
-		cx = new int;
-		cy = new int;
+		cx = x;
+		cy = y;
 
-		*cx = x;
-		*cy = y;
+		std::cout << "C created" << std::endl;
 	}
 
 	virtual ~C()
 	{
-		delete cx;
-		delete cy;
+		std::cout << "C deleted" << std::endl;
 	}
 
 	C(const C& c) : B(c)
 	{
 		cx = c.cx;
 		cy = c.cy;
+
+		std::cout << "C copied" << std::endl;
 	}
 };

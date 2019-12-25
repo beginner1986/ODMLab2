@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../Task1/A.h"
+#include "A.h"
 
 // TASK 3: operators overloading
 
