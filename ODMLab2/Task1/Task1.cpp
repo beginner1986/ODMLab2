@@ -15,10 +15,10 @@ int main()
 	D* d = new D(1, 2, 3, 4, 5, 6, 7, 8);
 
 	std::cout << "\ncopy A: " << std::endl;
-	A a2 = *a;
+	A a2(*a);
 
 	std::cout << "\ncopy D: " << std::endl;
-	D d2 = *d;
+	D d2(*d);
 
 	std::cout << "\ndelete A: " << std::endl;
 	delete a;
