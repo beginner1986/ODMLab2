@@ -29,6 +29,8 @@ public:
 		ax = x;
 		ay = y;
 		tab = new int[10];
+		for (int i = 0; i < 10; i++)
+			tab[i] = 0;
 
 		std::cout << "A created" << std::endl;
 	}
@@ -38,14 +40,6 @@ public:
 		delete tab;
 		
 		std::cout << "A deleted" << std::endl;
-	}
-
-	A(const A& a)
-	{
-		ax = a.ax;
-		ay = a.ay;
-
-		std::cout << "A copied" << std::endl;
 	}
 
 	A& operator=(const A& other);

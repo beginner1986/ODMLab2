@@ -44,20 +44,24 @@ inline A& A::operator++(int)
 
 inline A& A::operator+(const A& other)
 {
-	this->ax += (int)other.ax;
-	this->ay += (int)other.ay;
+	A result;
+
+	result.ax = this->ax + other.ax;
+	result.ay = this->ay + other.ay;
 
 	std::cout << "+ overloaded" << std::endl;
-	return *this;
+	return result;
 }
 
 inline A& A::operator-(const A& other)
 {
-	this->ax -= (int)other.ax;
-	this->ay -= (int)other.ay;
+	A result;
+
+	result.ax = this->ax - other.ax;
+	result.ay = this->ay - other.ay;
 
 	std::cout << "- overloaded" << std::endl;
-	return *this;
+	return result;
 }
 
 inline bool A::operator>(const A& other)
