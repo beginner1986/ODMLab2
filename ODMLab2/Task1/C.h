@@ -14,6 +14,14 @@ public:
 	int Square() { return cx * cx; }
 
 public:
+	C()
+	{
+		cx = 0;
+		cy = 0;
+
+		std::cout << "C created" << std::endl;
+	}
+
 	C(int ax, int ay, int bx, int by, int x, int y) : B(ax, ay, bx, by)
 	{
 		cx = x;

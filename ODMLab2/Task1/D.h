@@ -16,6 +16,15 @@ public:
 	int Sqrt() { return (int)sqrt(dx); }
 
 public:
+	D()
+	{
+		dx = 0;
+		dy = 0;
+		tab = new int[10];
+
+		std::cout << "D created" << std::endl;
+	}
+
 	D(int ax, int ay, int bx, int by, int cx, int cy, int x, int y)
 		: C(ax, ay, bx, by, cx, cy)
 	{

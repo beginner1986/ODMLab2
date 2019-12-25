@@ -7,10 +7,18 @@
 class Diamond : public Derived1, Derived2
 {
 public:
-	Diamond() = default;
+	Diamond()
+	{
+		std::cout << "Diamond created" << std::endl;
+	}
+
+	virtual ~Diamond()
+	{
+		std::cout << "Diamond deleted" << std::endl;
+	}
 
 	void PrintName() override
 	{
-		std::cout << "Diamond" << std::endl;
+		std::cout << "Diamond method" << std::endl;
 	}
 };

@@ -14,6 +14,14 @@ public:
 	int Divide() { return bx / by; }
 
 public:
+	B()
+	{
+		bx = 0;
+		by = 0;
+
+		std::cout << "B created" << std::endl;
+	}
+
 	B(int ax, int ay, int x, int y) : A(ax, ay)
 	{
 		bx = x;
