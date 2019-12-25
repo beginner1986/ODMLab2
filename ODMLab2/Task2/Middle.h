@@ -6,6 +6,16 @@
 class Middle : public Abstract
 {
 public:
+	Middle()
+	{
+		std::cout << "Middle created" << std::endl;
+	}
+
+	virtual ~Middle()
+	{
+		std::cout << "Middle deleted" << std::endl;
+	}
+
 	void Hello() override
 	{
 		std::cout << "Hello Middle" << std::endl;
