@@ -13,6 +13,7 @@ void findElement(T *array, size_t size, T element)
 	std::cout << std::endl;
 }
 
+template<>
 void findElement(char* array, size_t size, char element)
 {
 	for (size_t i = 0; i < size; i++)
