@@ -11,15 +11,12 @@ private:
 
 public:
 	explicit Point2D(T _x, T _y) : x(_x), y(_y) {}
-	T getX() { return x; }
-	T getY() { return y; }
+	T getX() const { return x; }
+	T getY() const { return y; }
 	void setX(T x) { this->x = x; }
 	void setY(T y) { this->y = y; }
 
-	virtual void print()
-	{
-		std::cout << "(" << x << ", " << y << ")" << std::endl;
-	}
+	virtual void print() { std::cout << "(" << x << ", " << y << ")" << std::endl; }
 };
 
 // non-template inheritance
@@ -29,10 +26,7 @@ private:
 	char name;
 
 public:
-	Entity(double x, double y, char name) : Point2D(x, y)
-	{
-		this->name = name;
-	}
+	Entity(double x, double y, char name) : Point2D(x, y) {	this->name = name; }
 
 	void print() override
 	{
@@ -51,7 +45,7 @@ private:
 
 public:
 	explicit Point3D(T _x, T _y, T _z) : Point2D<T>(_x, _y), z(_z) {}
-	T getZ() { return z; }
+	T getZ() const { return z; }
 	void setZ(T z) { this->z = z; }
 
 	void print() override

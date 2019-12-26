@@ -24,6 +24,12 @@ public:
 		else
 			return false;
 	}
+
+	inline bool operator==(const Point& other) const
+	{
+		if (x == other.x && y == other.y)
+			return true;
+		else
+			return false;
+	}
 };
-
-
