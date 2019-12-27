@@ -10,7 +10,7 @@ private:
 	T x, y;
 
 public:
-	explicit Point2D(T _x, T _y) : x(_x), y(_y) {}
+	Point2D(T _x, T _y) : x(_x), y(_y) {}
 	T getX() const { return x; }
 	T getY() const { return y; }
 	void setX(T x) { this->x = x; }
@@ -26,7 +26,7 @@ private:
 	char name;
 
 public:
-	Entity(double x, double y, char name) : Point2D(x, y) {	this->name = name; }
+	explicit Entity(double x, double y, char name) : Point2D(x, y) { this->name = name; }
 
 	void print() override
 	{
@@ -44,7 +44,7 @@ private:
 	T z;
 
 public:
-	explicit Point3D(T _x, T _y, T _z) : Point2D<T>(_x, _y), z(_z) {}
+	Point3D(T _x, T _y, T _z) : Point2D<T>(_x, _y), z(_z) {}
 	T getZ() const { return z; }
 	void setZ(T z) { this->z = z; }
 
@@ -63,7 +63,7 @@ class Point3D<double>
 private:
 	double x, y, z;
 public:
-	Point3D(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
+	explicit Point3D(double _x, double _y, double _z) : x(_x), y(_y), z(_z) {}
 
 	bool operator==(const Point3D<double>& other)
 	{
