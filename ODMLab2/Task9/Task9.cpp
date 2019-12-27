@@ -7,10 +7,14 @@ class Add
 {
 public:
 	Add() {};
-	double operator() (int x, int& y) { 
-		int result = x + y;
-		y = 0;
-		return result; 
+	int operator() (int x, int& y) { 
+		auto f = [](int x, int& y) {
+			int result = x + y;
+			y = 0;
+			return result; 
+		};
+
+		return f(x, y);
 	}
 };
 
