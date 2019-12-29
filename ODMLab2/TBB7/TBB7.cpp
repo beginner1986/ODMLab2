@@ -32,7 +32,10 @@ int main()
 	tbb::tick_count before = tbb::tick_count::now();
 	while (std::getline(inputFile, line))
 	{
-		std::reverse(line.begin(), line.end());
+		size_t n = line.size() - 1;
+		for (size_t i = 0; i < line.size() / 2; i++, n--)
+			std::swap(line[i], line[n]);
+		
 		sequenceOutputFile << line << std::endl;
 	}
 	tbb::tick_count after = tbb::tick_count::now();
@@ -65,8 +68,8 @@ int main()
 		tbb::make_filter<std::string, std::string>(
 			tbb::filter::parallel,
 			[](std::string input) -> std::string {
-				int n = input.size() - 1;
-				for (int i = 0; i < input.size() / 2; i++, n--)
+				size_t n = input.size() - 1;
+				for (size_t i = 0; i < input.size() / 2; i++, n--)
 				{
 					std::swap(input[i], input[n]);
 				}
