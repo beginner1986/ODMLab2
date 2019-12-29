@@ -18,7 +18,7 @@ Matrix::Matrix(std::string fileName)
 	try {
 		file.exceptions(file.failbit);
 	}
-	catch (const std::ios_base::failure & e)
+	catch (const std::ios_base::failure)
 	{
 		std::cout << "Cannot read the file" << std::endl;
 		exit(0);
