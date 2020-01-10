@@ -53,6 +53,7 @@ public:
 	bool operator==(const A& other);
 	bool operator!=(const A& other);
 	int& operator[](size_t index);
-	A& operator()(int ax, int ay);
+	void operator()();
 	A& operator()(int ax);
+	A& operator()(int ax, int ay);
 };

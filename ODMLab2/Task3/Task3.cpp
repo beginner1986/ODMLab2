@@ -21,7 +21,8 @@ int main()
 	result = a1 < a2;
 	result = a1 == a2;
 	result = a1 != a2;
-	a3(1);
+	a3();
+	a3(2);
 	a3(1, 2);
 	int i = a2[1];
 

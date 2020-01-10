@@ -119,6 +119,11 @@ inline int& A::operator[](size_t index)
 	}
 }
 
+inline void A::operator()()
+{
+	std::cout << "() no arguments overloaded" << std::endl;
+}
+
 inline A& A::operator()(int ax)
 {
 	std::cout << "() single overloaded" << std::endl;
